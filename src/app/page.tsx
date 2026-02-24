@@ -1,23 +1,31 @@
 import Link from "next/link";
+import { HeroInteraction } from "@/components/hero-interaction";
 import { capabilityChips, caseStudies, impactStats, services, trustPoints } from "@/lib/site-content";
 
 export default function Home() {
   return (
     <main className="page-shell pb-8 pt-10">
-      <section className="glass accent-ring relative overflow-hidden rounded-3xl p-8 md:p-14">
-        <div className="pointer-events-none absolute -top-10 -left-12 h-44 w-44 rounded-full bg-sky-300/15 blur-2xl animate-float-slow" />
-        <div className="pointer-events-none absolute -right-10 bottom-0 h-52 w-52 rounded-full bg-indigo-300/10 blur-2xl animate-float" />
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/80">
+      <section id="hero-card" className="glass accent-ring hero-card relative overflow-hidden rounded-3xl p-8 md:p-14">
+        <HeroInteraction targetId="hero-card" />
+        <div className="hero-bg-layer" aria-hidden="true">
+          <span className="aurora-blob aurora-blob-one" />
+          <span className="aurora-blob aurora-blob-two" />
+          <span className="aurora-blob aurora-blob-three" />
+          <span className="hero-grid-overlay" />
+          <span className="hero-grain-overlay" />
+          <span className="hero-mouse-light" />
+        </div>
+        <p className="hero-fade-up hero-delay-1 text-sm font-medium uppercase tracking-[0.2em] text-white/80">
           Product Studio
         </p>
-        <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+        <h1 className="hero-fade-up hero-delay-2 mt-5 max-w-4xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
           Trusted digital products for companies ready to scale.
         </h1>
-        <p className="muted mt-6 max-w-3xl text-lg leading-8">
+        <p className="hero-fade-up hero-delay-3 muted mt-6 max-w-3xl text-lg leading-8">
           Unmarked Goods designs and builds mobile apps, custom software, and AI-enabled products
           that solve real business problems and support long-term growth.
         </p>
-        <div className="mt-8 flex flex-wrap gap-4">
+        <div className="hero-fade-up hero-delay-4 mt-8 flex flex-wrap gap-4">
           <Link
             className="rounded-full bg-white px-6 py-3 text-sm font-semibold !text-blue-950 transition hover:bg-slate-200"
             href="/contact"
