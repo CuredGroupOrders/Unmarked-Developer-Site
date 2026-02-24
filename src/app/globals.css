@@ -345,11 +345,17 @@ a {
 .impact-band {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 1.2rem;
+  gap: 1.5rem;
+  padding-inline: 0.25rem;
 }
 
 .impact-item {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 8.5rem;
 }
 
 .impact-value {
@@ -359,6 +365,8 @@ a {
   font-size: clamp(1.85rem, 5.6vw, 4.2rem);
   line-height: 1.02;
   text-wrap: balance;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 .impact-value-complete {
@@ -366,9 +374,11 @@ a {
 }
 
 .impact-label {
-  margin-top: 0.45rem;
+  margin-top: 0.6rem;
   color: #adc0df;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  max-width: 18ch;
 }
 
 @media (min-width: 900px) {
@@ -396,5 +406,23 @@ a {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 520px) {
+  .impact-band {
+    gap: 1.2rem;
+  }
+
+  .impact-item {
+    min-height: 7.4rem;
+  }
+
+  .impact-value {
+    font-size: clamp(1.7rem, 9vw, 2.3rem);
+  }
+
+  .impact-label {
+    font-size: 0.84rem;
   }
 }
