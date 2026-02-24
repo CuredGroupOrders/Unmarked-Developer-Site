@@ -16,15 +16,12 @@ export default function Home() {
           <span className="hero-grain-overlay" />
           <span className="hero-mouse-light" />
         </div>
-        <p className="hero-fade-up hero-delay-1 text-sm font-medium uppercase tracking-[0.2em] text-white/80">
-          Product Studio
-        </p>
         <h1 className="hero-fade-up hero-delay-2 mt-5 max-w-4xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
           Trusted digital products for companies ready to scale.
         </h1>
         <p className="hero-fade-up hero-delay-3 muted mt-6 max-w-3xl text-lg leading-8">
-          Unmarked Goods designs and builds mobile apps, custom software, and AI-enabled products
-          that solve real business problems and support long-term growth.
+          We design and build mobile apps, custom software, and AI-enabled products that solve real
+          business problems and support long-term growth.
         </p>
         <div className="hero-fade-up hero-delay-4 mt-8 flex flex-wrap gap-4">
           <Link
