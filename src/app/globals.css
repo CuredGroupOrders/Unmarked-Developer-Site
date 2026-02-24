@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #06080f;
+  --foreground: #f2f6ff;
+  --muted: #b7bfd4;
+  --card-border: rgba(255, 255, 255, 0.2);
+  --card-bg: rgba(255, 255, 255, 0.09);
+  --card-bg-strong: rgba(255, 255, 255, 0.14);
+  --accent: #89b4ff;
 }
 
 @theme inline {
@@ -12,15 +17,53 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(137, 180, 255, 0.24), transparent 30%),
+    radial-gradient(circle at 80% 5%, rgba(130, 251, 214, 0.14), transparent 32%),
+    radial-gradient(circle at 80% 80%, rgba(255, 180, 220, 0.12), transparent 28%),
+    linear-gradient(180deg, #06080f 0%, #0a1020 60%, #070a12 100%);
+}
+
+a {
+  color: inherit;
+}
+
+.page-shell {
+  margin: 0 auto;
+  max-width: 78rem;
+  padding: 1.5rem;
+}
+
+.glass {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.glass-strong {
+  background: var(--card-bg-strong);
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.4rem);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.accent-ring {
+  box-shadow:
+    0 0 0 1px rgba(137, 180, 255, 0.35),
+    0 0 40px rgba(137, 180, 255, 0.08);
 }

@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Unmarked Goods Website
 
-## Getting Started
+Marketing website for Unmarked Goods built with Next.js and Tailwind CSS.
 
-First, run the development server:
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Included pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Home, Services, Work, About, Contact
+- Contact success page
+- Privacy Policy, Terms of Service, Data Protection, Cookie Policy
 
-## Learn More
+## Contact form setup (Netlify Forms)
 
-To learn more about Next.js, take a look at the following resources:
+The contact form is implemented in `src/app/contact/page.tsx` and includes:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `data-netlify="true"`
+- hidden `form-name` field (`contact`)
+- honeypot field (`bot-field`)
+- consent checkbox (`consentAccepted`)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+After first deploy:
 
-## Deploy on Vercel
+1. Open Netlify project dashboard.
+2. Go to **Project configuration** -> **Notifications** -> **Emails and webhooks**.
+3. Add a **Form submission notification** to `simonmuflier@gmail.com`.
+4. Submit a test form on production and confirm email delivery.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Netlify deployment steps
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push this project to a Git repository (GitHub/GitLab/Bitbucket).
+2. In Netlify, select **Add new site** -> **Import an existing project**.
+3. Connect your repo and deploy with default Next.js settings.
+4. Confirm deploy success and page rendering.
+
+## GoDaddy domain connection
+
+1. In Netlify: **Domain management** -> **Add a domain**.
+2. Add both `yourdomain.com` and `www.yourdomain.com`.
+3. In GoDaddy DNS, configure records exactly as Netlify instructs:
+   - Apex `@` record target from Netlify domain setup.
+   - `www` CNAME to your Netlify site hostname.
+4. Wait for DNS propagation, then verify SSL certificate issuance in Netlify.
+5. Set primary domain and enforce canonical redirect (`www` or apex).
+
+## Compliance notes
+
+The site includes baseline global-friendly legal pages. Before public launch, have your legal counsel review:
+
+- Privacy Policy
+- Terms of Service
+- Data Protection
+- Cookie Policy
+
+## Quality checks
+
+```bash
+npm run lint
+npm run build
+```
+
+Both commands should pass before production deployment.
