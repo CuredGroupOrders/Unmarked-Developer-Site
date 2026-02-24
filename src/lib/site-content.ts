@@ -3,7 +3,6 @@ export const brand = {
   tagline: "Mobile apps, custom software, and AI-enabled products for ambitious teams.",
   description:
     "Unmarked Goods helps companies ship polished digital products with startup speed and enterprise-grade discipline.",
-  contactEmail: "simonmuflier@gmail.com",
 };
 
 export const navItems = [
@@ -105,10 +104,10 @@ export const caseStudies = [
 ];
 
 export const impactStats = [
-  { label: "Average delivery sprint", value: "2 weeks" },
-  { label: "Typical initial release", value: "10-16 weeks" },
-  { label: "Senior-led execution", value: "100%" },
-];
+  { label: "Average delivery sprint", type: "single", value: 2, suffix: " weeks" },
+  { label: "Typical initial release", type: "range", from: 10, to: 16, suffix: " weeks" },
+  { label: "Senior-led execution", type: "single", value: 100, suffix: "%" },
+] as const;
 
 export const capabilityChips = [
   "iOS & Android",

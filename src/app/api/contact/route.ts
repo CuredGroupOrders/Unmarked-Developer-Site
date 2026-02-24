@@ -24,9 +24,9 @@ export async function POST(req: NextRequest) {
 
   const postmarkToken = process.env.POSTMARK_SERVER_TOKEN ?? "";
   const emailFrom = process.env.EMAIL_FROM ?? "";
-  const emailTo = process.env.CONTACT_EMAIL_TO ?? "simonmuflier@gmail.com";
+  const emailTo = process.env.CONTACT_EMAIL_TO ?? "";
 
-  if (!postmarkToken || !emailFrom) {
+  if (!postmarkToken || !emailFrom || !emailTo) {
     return NextResponse.json({ error: "email_not_configured" }, { status: 500 });
   }
 

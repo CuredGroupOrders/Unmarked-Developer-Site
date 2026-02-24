@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact-form";
-import { brand } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Contact | Unmarked Goods",
@@ -15,13 +14,6 @@ export default function ContactPage() {
           <h1 className="section-title">Tell us what you are building</h1>
           <p className="muted mt-4 text-sm leading-7">
             Share your goals, constraints, and timeline. We usually respond within one business day.
-          </p>
-          <p className="muted mt-6 text-sm">
-            Prefer email? Reach us directly at{" "}
-            <a className="underline" href={`mailto:${brand.contactEmail}`}>
-              {brand.contactEmail}
-            </a>
-            .
           </p>
         </article>
 

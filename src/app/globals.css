@@ -308,7 +308,8 @@ a {
   .aurora-blob,
   .hero-grid-overlay,
   .hero-card::before,
-  .hero-fade-up {
+  .hero-fade-up,
+  .impact-value-complete {
     animation: none !important;
     transform: none !important;
   }
@@ -341,11 +342,59 @@ a {
   background: rgba(20, 30, 55, 0.55);
 }
 
+.impact-band {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.impact-item {
+  text-align: center;
+}
+
+.impact-value {
+  color: #e4efff;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-size: clamp(2.3rem, 7vw, 5.3rem);
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.impact-value-complete {
+  animation: impact-bounce 430ms cubic-bezier(0.17, 0.89, 0.28, 1.3) both;
+}
+
+.impact-label {
+  margin-top: 0.45rem;
+  color: #adc0df;
+  font-size: 0.92rem;
+}
+
+@media (min-width: 900px) {
+  .impact-band {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: end;
+  }
+}
+
 @keyframes marquee-slide {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes impact-bounce {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }

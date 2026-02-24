@@ -49,7 +49,7 @@ export default function PrivacyPolicyPage() {
       <section>
         <h2 className="text-base font-semibold">6. Contact</h2>
         <p className="muted mt-2">
-          For privacy questions or data requests, email <a className="underline" href="mailto:simonmuflier@gmail.com">simonmuflier@gmail.com</a>.
+          For privacy questions or data requests, please use the contact form on this website.
         </p>
       </section>
     </LegalLayout>

@@ -33,7 +33,7 @@ export default function CookiePolicyPage() {
       <section>
         <h2 className="text-base font-semibold">4. Contact</h2>
         <p className="muted mt-2">
-          Questions about cookies can be sent to <a className="underline" href="mailto:simonmuflier@gmail.com">simonmuflier@gmail.com</a>.
+          Questions about cookies can be submitted through the contact form on this website.
         </p>
       </section>
     </LegalLayout>

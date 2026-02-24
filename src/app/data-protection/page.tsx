@@ -40,7 +40,7 @@ export default function DataProtectionPage() {
       <section>
         <h2 className="text-base font-semibold">5. Contact</h2>
         <p className="muted mt-2">
-          Data protection requests can be sent to <a className="underline" href="mailto:simonmuflier@gmail.com">simonmuflier@gmail.com</a>.
+          Data protection requests can be submitted through the contact form on this website.
         </p>
       </section>
     </LegalLayout>

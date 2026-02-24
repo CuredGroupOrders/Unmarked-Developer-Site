@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AnimatedImpactStats } from "@/components/animated-impact-stats";
 import { HeroInteraction } from "@/components/hero-interaction";
 import { capabilityChips, caseStudies, impactStats, services, trustPoints } from "@/lib/site-content";
 
@@ -47,7 +48,7 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="mt-10 glass rounded-2xl p-5">
+      <section className="mt-10 p-1">
         <div className="marquee">
           <div className="marquee-track">
             {[...capabilityChips, ...capabilityChips].map((chip, index) => (
@@ -71,14 +72,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-14 grid gap-5 md:grid-cols-3">
-        {impactStats.map((stat) => (
-          <article key={stat.label} className="glass card-lift rounded-2xl p-6">
-            <p className="text-3xl font-semibold text-sky-100">{stat.value}</p>
-            <p className="muted mt-2 text-sm">{stat.label}</p>
-          </article>
-        ))}
-      </section>
+      <AnimatedImpactStats stats={impactStats} />
 
       <section className="mt-14 animate-enter">
         <div className="flex items-center justify-between gap-3">
@@ -90,7 +84,7 @@ export default function Home() {
         <div className="mt-6 grid gap-5 md:grid-cols-3">
           {caseStudies.map((item) => (
             <article key={item.client} className="glass card-lift rounded-2xl p-6">
-              <h3 className="font-semibold">{item.client}</h3>
+              <h3 className="text-2xl font-semibold leading-tight tracking-tight">{item.client}</h3>
               <p className="mt-3 text-sm leading-7 text-white/95">{item.outcome}</p>
               <p className="muted mt-4 text-sm italic">
                 &ldquo;{item.quote}&rdquo;
