@@ -23,6 +23,10 @@ export default function WorkPage() {
             <h2 className="text-lg font-semibold">{caseStudy.client}</h2>
             <p className="mt-4 text-sm leading-7 text-white/95">{caseStudy.outcome}</p>
             <p className="muted mt-4 text-sm">Scope: {caseStudy.scope}</p>
+            <p className="mt-4 text-sm italic text-white/85">
+              &ldquo;{caseStudy.quote}&rdquo;
+            </p>
+            <p className="muted mt-2 text-xs">{caseStudy.quoteBy}</p>
           </article>
         ))}
       </section>

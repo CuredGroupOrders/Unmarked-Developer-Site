@@ -16,11 +16,10 @@ export function SiteFooter() {
           <div>
             <p className="text-sm font-medium">{brand.name}</p>
             <p className="muted mt-2 max-w-xl text-sm">
-              Building trusted digital products for ambitious teams. For project inquiries, email{" "}
-              <a className="underline" href={`mailto:${brand.contactEmail}`}>
-                {brand.contactEmail}
-              </a>
-              .
+              Building trusted digital products for ambitious teams. Ready to talk about your build?
+              <Link className="ml-1 underline" href="/contact">
+                Contact us.
+              </Link>
             </p>
           </div>
           <ul className="flex flex-wrap gap-4 text-sm text-white/85">
