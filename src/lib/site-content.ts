@@ -43,63 +43,80 @@ export const trustPoints = [
 
 export const caseStudies = [
   {
-    client: "Northline Freight Systems",
+    client: "Logistics and fleet operations company",
     outcome:
       "Reduced dispatch and field reporting time by 41% after launching a unified iOS/Android operations app.",
     scope:
       "Discovery, mobile app architecture, offline sync, and integration with legacy dispatch systems over a 16-week delivery.",
     quote:
       "Unmarked Goods gave us a product our drivers actually use every day. Dispatch finally has one source of truth.",
-    quoteBy: "Director of Operations, Northline Freight Systems",
+    quoteBy: "Director of Operations",
   },
   {
-    client: "BeaconCare Medical Network",
+    client: "Multi-location healthcare services provider",
     outcome:
       "Cut manual intake work by 58% with AI-assisted document parsing and triage workflows.",
     scope:
       "Workflow redesign, secure cloud deployment, role-based access, and audit logging for regulated operations.",
     quote:
       "The team translated a complex compliance environment into a system our staff could adopt quickly and confidently.",
-    quoteBy: "VP Clinical Operations, BeaconCare Medical Network",
+    quoteBy: "VP Clinical Operations",
   },
   {
-    client: "SignalDesk Analytics",
+    client: "B2B analytics SaaS platform",
     outcome:
       "Improved 90-day retention by 24% after shipping guided onboarding and behavior-based product analytics.",
     scope:
       "User research, onboarding redesign, event schema implementation, and full-stack product delivery in 12 weeks.",
     quote:
       "They helped us focus on the right user moments. Activation improved almost immediately after launch.",
-    quoteBy: "Head of Product, SignalDesk Analytics",
+    quoteBy: "Head of Product",
   },
   {
-    client: "Evergreen Home Retail Group",
+    client: "Retail franchise and e-commerce group",
     outcome:
       "Unified in-store and online fulfillment workflows, reducing order errors by 36% across 42 locations.",
     scope:
       "Custom operations dashboard, inventory workflow automation, and executive reporting with real-time KPI visibility.",
     quote:
       "We went from reactive firefighting to proactive decision-making in less than one quarter.",
-    quoteBy: "COO, Evergreen Home Retail Group",
+    quoteBy: "Chief Operating Officer",
   },
   {
-    client: "Alder & Finch Advisory",
+    client: "Professional services and advisory firm",
     outcome:
       "Shipped a secure client portal that reduced project admin overhead by 34% and improved renewal rate by 11%.",
     scope:
       "Portal architecture, secure authentication, document workflow tooling, and client-facing experience redesign.",
     quote:
       "Our clients now see us as significantly more modern and responsive, and our team spends less time on admin.",
-    quoteBy: "Managing Partner, Alder & Finch Advisory",
+    quoteBy: "Managing Partner",
   },
   {
-    client: "Atlas Industrial Supply",
+    client: "Industrial equipment distribution business",
     outcome:
       "Delivered an AI-assisted quoting workflow that reduced proposal turnaround from 2.4 days to under 6 hours.",
     scope:
       "AI workflow design, ERP and pricing engine integration, quote governance rules, and sales UX implementation.",
     quote:
       "Our sales reps can respond same-day with confidence. That has changed how we compete.",
-    quoteBy: "Commercial Director, Atlas Industrial Supply",
+    quoteBy: "Commercial Director",
   },
+];
+
+export const impactStats = [
+  { label: "Average delivery sprint", value: "2 weeks" },
+  { label: "Typical initial release", value: "10-16 weeks" },
+  { label: "Senior-led execution", value: "100%" },
+];
+
+export const capabilityChips = [
+  "iOS & Android",
+  "Product Discovery",
+  "AI Workflows",
+  "Custom Dashboards",
+  "API Integrations",
+  "Security by Design",
+  "Analytics & Telemetry",
+  "Post-launch Support",
 ];

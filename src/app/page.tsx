@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { caseStudies, services, trustPoints } from "@/lib/site-content";
+import { capabilityChips, caseStudies, impactStats, services, trustPoints } from "@/lib/site-content";
 
 export default function Home() {
   return (
@@ -19,8 +19,9 @@ export default function Home() {
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
-            className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0b2a5b] transition hover:bg-slate-200"
+            className="rounded-full bg-white px-6 py-3 text-sm font-semibold !text-blue-950 transition hover:bg-slate-200"
             href="/contact"
+            style={{ color: "#0b2a5b" }}
           >
             Start a project
           </Link>
@@ -38,6 +39,18 @@ export default function Home() {
         ))}
       </section>
 
+      <section className="mt-10 glass rounded-2xl p-5">
+        <div className="marquee">
+          <div className="marquee-track">
+            {[...capabilityChips, ...capabilityChips].map((chip, index) => (
+              <span key={`${chip}-${index}`} className="chip">
+                {chip}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="mt-14 animate-enter">
         <h2 className="section-title">What we build</h2>
         <div className="mt-6 grid gap-5 md:grid-cols-3">
@@ -48,6 +61,15 @@ export default function Home() {
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="mt-14 grid gap-5 md:grid-cols-3">
+        {impactStats.map((stat) => (
+          <article key={stat.label} className="glass card-lift rounded-2xl p-6">
+            <p className="text-3xl font-semibold text-sky-100">{stat.value}</p>
+            <p className="muted mt-2 text-sm">{stat.label}</p>
+          </article>
+        ))}
       </section>
 
       <section className="mt-14 animate-enter">
